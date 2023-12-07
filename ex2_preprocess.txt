@@ -1,0 +1,39 @@
+#To find the empty detail in the table 
+print(dataset.isnull().sum())
+
+#Label the category
+dataset['binned_age'] = pd.cut(dataset['Age'],bins=3,labels=['Middle-aged', 'old-aged', 'Young-aged'])
+
+from sklearn.preprocessing import LabelEncoder
+encoder = LabelEncoder()
+dataset['Encoded_state'] = encoder.fit_transform(dataset1['State'])
+
+
+#Min and Max Scaler
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+dataset1['Scaled_Annual Income'] = scaler.fit_transform(dataset1[['Annual Income']])
+
+#Standard Scaler
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+dataset1['standardized_Annual Income'] = scaler.fit_transform(dataset1[['Annual Income']])
+
+
+#Decision Tree
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import tree
+27
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor
+#features
+features=['State','Age','Annual Income']
+# x and y datasets
+x = dataset1.loc[:, features]
+y = dataset1.loc[:, ['Eligible for Scholarship']]
+print(x);
+print(y);
+
+#x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=0, train_size = .75)

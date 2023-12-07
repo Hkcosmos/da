@@ -1,0 +1,147 @@
+#line graph
+import matplotlib.pyplot as plt
+import numpy as np
+xpoints = np.array([0, 7])
+ypoints = np.array([0, 150])
+plt.plot(xpoints, ypoints)
+plt.show()
+
+#Square Graph
+import matplotlib.pyplot as plt
+import numpy as np
+xpoints = np.array([15, 5])
+ypoints = np.array([9, 10])
+plt.plot(xpoints, ypoints, 's')
+plt.show()
+
+#Multi point Line graph
+import matplotlib.pyplot as plt
+import numpy as np
+xpoints = np.array([2, 4, 6, 8])
+ypoints = np.array([1,5, 3, 7])
+plt.plot(xpoints, ypoints)
+plt.show()
+
+Plotting without x-points
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array([11, 2, 13, 4, 50, 2])
+plt.plot(ypoints)
+plt.show()
+
+#Line graph with dotted points
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array([6, 19, 2, 10])
+plt.plot(ypoints, marker = 's')
+plt.show()
+
+#Dotted graph with points
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array([32, 91, 1, 10])
+plt.plot(ypoints, 'o:b')
+plt.show()
+
+#Dotted graph with Multi points
+plt.plot(ypoints, 'o:')
+plt.show()
+
+#Graphical representation of graph
+import matplotlib.pyplot as plt
+import numpy as np
+ypoints = np.array([12, 9, 1, 10])
+plt.plot(ypoints, ls = '--')
+plt.show()
+
+#Combination of two graphs
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.array([60, 65, 70, 75, 80, 85, 9, 95, 10, 15])
+y = np.array([18, 19, 20, 10, 22, 23, 24, 25, 26,27])
+plt.plot(x, y)
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+plt.show()
+
+#Plot the x-axis and y-axis
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.array([60, 65, 70, 75, 80, 85, 90, 95, 100, 105])
+y = np.array([155, 190, 200, 210, 220, 232, 240, 250, 260,270])
+plt.plot(x, y)
+plt.title("people vehicle usage")
+plt.xlabel("Average spepd")
+plt.ylabel("kilometers")
+plt.show()
+
+#Position of label in the alignment
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.array([60, 65, 70, 75, 80, 85, 90, 95, 100, 105])
+y = np.array([180, 190, 200, 210, 220, 230, 240, 250, 260,270])
+plt.title("vehicle usage", loc = 'left')
+plt.xlabel("Average spees")
+plt.ylabel("litres consumed")
+17
+plt.plot(x, y)
+plt.show()
+
+#Grid of the graph
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.array([60, 65, 70, 75, 80, 85, 90, 95, 100, 105])
+y = np.array([180, 190, 200, 210, 220, 230, 240, 250, 260,270])
+plt.title("vehicle usage")
+plt.xlabel("Average speed")
+plt.ylabel("litres consumed")
+plt.plot(x, y)
+plt.grid()
+plt.show()
+
+#Import the Libraries
+import matplotlib.pyplot as plt
+import numpy as np
+#Subplots the graphs
+x = np.array([0, 1, 22, 3])
+y = np.array([2, 9, 1, 10])
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+
+#Subplots of the graph
+x = np.array([0, 11, 2, 3])
+y = np.array([100, 20, 30, 40])
+plt.subplot(1, 12, 2)
+plt.plot(x,y)
+plt.show()
+
+#Pie chart
+import matplotlib.pyplot as plt
+import numpy as np
+y = np.array([19, 3, 60, 20])
+plt.pie(y)
+plt.show()
+
+#Pie chart with labels
+import matplotlib.pyplot as plt
+import numpy as np
+y = np.array([10, 25, 50, 20])
+mylabels = ["blue", "orange", "green", "red"]
+plt.pie(y, labels = mylabels)
+plt.show()
+
+#Bar chart
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array(["first", "second", "third", "fourth"])
+y = np.array([11, 30, 50, 17])
+plt.bar(x,y)
+plt.show()
+
+#Scatter Plots
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.array([15,7,18,7,2])
+y = np.array([66,1,5,8,50])
+plt.scatter(x, y)
+plt.show()
